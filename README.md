@@ -17,6 +17,7 @@ These are for my use when I need to install a clean ubuntu on my computer.
 - [Steam](#steam)
 - [Postman](#postman)
 - [Java SDK](#java-sdk)
+- [Make](#make)
 
 ## Google Chrome
 ``` shell
@@ -273,4 +274,12 @@ wget https://download.oracle.com/java/22/latest/jdk-22_linux-x64_bin.deb
 ```
 ``` shell
 sudo dpkg -i jdk-22_linux-x64_bin.deb
+```
+
+## Make
+``` shell
+sudo apt-get update
+```
+``` shell
+sudo apt-get -y install make
 ```
