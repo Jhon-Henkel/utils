@@ -7,8 +7,8 @@ start-mfp:
 	cd projects/my-finances-planner-api && vendor/bin/sail up -d && cd ../my-finances-planner-app && ionic serve
 
 docker-clean:
-        @echo "Clearning container, images and volumes not in use"
-        docker rm $$(docker ps -a -f status=exited -f status=created -q) && docker volume prune -a -f && docker image prune -a -f
+		@echo "Clearning container, images and volumes not in use"
+		docker rm $$(docker ps -a -f status=exited -f status=created -q) && docker volume prune -a -f && docker image prune -a -f
 
 update:
 	@echo "Updating"
