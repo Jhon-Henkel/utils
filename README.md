@@ -19,6 +19,7 @@ These are for my use when I need to install a clean ubuntu on my computer.
 - [Java SDK](#java-sdk)
 - [Make](#make)
 - [Go Lang](#go-lang)
+- [Copy My Makefile](#copy-my-makefile)
 
 ## Google Chrome
 ``` shell
@@ -300,4 +301,12 @@ sudo apt search gccgo-go
 ```
 ``` shell
 sudo apt install golang-go
+```
+
+## Copy My Makefile
+```shell
+git clone https://github.com/Jhon-Henkel/linux-post-install-commands.git
+```
+```shell
+cp linux-post-install-commands.git/Makefile .
 ```
