@@ -18,6 +18,7 @@ These are for my use when I need to install a clean ubuntu on my computer.
 - [Postman](#postman)
 - [Java SDK](#java-sdk)
 - [Make](#make)
+- [Go Lang](#go-lang)
 
 ## Google Chrome
 ``` shell
@@ -282,4 +283,21 @@ sudo apt-get update
 ```
 ``` shell
 sudo apt-get -y install make
+```
+
+## Go Lang
+``` shell
+sudo apt-get update
+```
+``` shell
+sudo apt upgrade
+```
+``` shell
+sudo apt search golang-go
+```
+``` shell
+sudo apt search gccgo-go
+```
+``` shell
+sudo apt install golang-go
 ```
