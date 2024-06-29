@@ -20,6 +20,7 @@ These are for my use when I need to install a clean ubuntu on my computer.
 - [Make](#make)
 - [Go Lang](#go-lang)
 - [Copy My Makefile](#copy-my-makefile)
+- [Termius](#termius)
 
 ## Google Chrome
 ``` shell
@@ -309,4 +310,12 @@ git clone https://github.com/Jhon-Henkel/linux-post-install-commands.git
 ```
 ```shell
 cp linux-post-install-commands.git/Makefile .
+```
+
+## Termius
+```shell
+wget https://www.termius.com/download/linux/Termius.deb
+```
+```shell
+sudo dpkg -i Termius.deb
 ```
