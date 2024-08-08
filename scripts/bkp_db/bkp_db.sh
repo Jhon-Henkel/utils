@@ -10,7 +10,7 @@ TIMESTAMP=$(date +"%F")
 BACKUP_FILE="db_backup_$TIMESTAMP.sql"
 DB_PASS="db_pass"
 
-cd /var/www/html
+cd /path/to/db/container
 
 echo "-> Iniciando BKP"
 docker exec $CONTAINER_NAME /bin/bash -c "mysqldump -u root --password=$DB_PASS --all-databases > /tmp/$BACKUP_FILE"
@@ -33,7 +33,7 @@ CONTAINER_NAME="container"
 FILE_PATH="$BACKUP_DIR$BACKUP_FILE"
 BLOB_NAME="$BACKUP_FILE"
 EMAIL_RECIPIENT="email_recipient"
-
+SCRIPTS_DIR="/path/scripts/dir"
 
 # Faça login na sua conta do Azure (você só precisa fazer isso uma vez o processo é manual)
 #az login
@@ -57,10 +57,10 @@ if [ $? -eq 0 ]; then
   rm $FILE_PATH
   echo
   echo "-> Enviando e-mail de sucesso"
-  ssmtp $EMAIL_RECIPIENT < success_bkp_db_mail.txt
+  ssmtp $EMAIL_RECIPIENT < $SCRIPTS_DIR/success_bkp_db_mail.txt
 else
   echo "Falha no upload do arquivo $FILE_PATH para o container $CONTAINER_NAME no Azure Blob Storage."
   echo
   echo "-> Enviando e-mail de falha"
-  ssmtp $EMAIL_RECIPIENT < fail_bkp_db_mail.txt
+  ssmtp $EMAIL_RECIPIENT < $SCRIPTS_DIR/fail_bkp_db_mail.txt
 fi
