@@ -13,7 +13,7 @@ DB_PASS="db_pass"
 cd /var/www/html
 
 echo "-> Iniciando BKP"
-docker exec -it $CONTAINER_NAME /bin/bash -c "mysqldump -u root --password=$DB_PASS --all-databases > /tmp/$BACKUP_FILE"
+docker exec $CONTAINER_NAME /bin/bash -c "mysqldump -u root --password=$DB_PASS --all-databases > /tmp/$BACKUP_FILE"
 echo
 echo "-> Copiando arquivos de BKP do container"
 docker cp $CONTAINER_NAME:/tmp/$BACKUP_FILE $BACKUP_DIR

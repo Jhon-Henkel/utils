@@ -14,12 +14,9 @@ These are for my use when I need to install a clean ubuntu on my computer.
 - [Vim](#vim)
 - [Zsh and Ho-my-zsh](#zsh-and-ho-my-zsh)
 - [Ionic cli](#ionic-cli)
-- [Steam](#steam)
-- [Postman](#postman)
 - [Java SDK](#java-sdk)
 - [Make](#make)
 - [Go Lang](#go-lang)
-- [Copy My Makefile](#copy-my-makefile)
 - [Termius](#termius)
 
 ## Google Chrome
@@ -231,43 +228,6 @@ sudo reboot
 npm install -g @ionic/cli
 ```
 
-## Steam
-``` shell
-wget https://cdn.akamai.steamstatic.com/client/installer/steam.deb
-```
-``` shell
-sudo dpkg -i steam.deb
-```
-
-## Postman
-Download from https://www.postman.com/downloads/ and run commands
-``` shell
-tar -xzf postman.tar.gz
-```
-``` shell
-sudo rm -rf /opt/Postman
-```
-``` shell
-sudo mv Postman /opt/Postman
-```
-``` shell
-sudo ln -s /opt/Postman/Postman /usr/bin/postman
-```
-``` shell
-cat > ~/.local/share/applications/postman.desktop <<EOL
-[Desktop Entry]
-Encoding=UTF-8
-Name=Postman
-Exec=postman
-# Before v6.1.2
-# Icon=/opt/Postman/resources/app/assets/icon.png
-Icon=/opt/Postman/app/resources/app/assets/icon.png
-Terminal=false
-Type=Application
-Categories=Development;
-EOL
-```
-
 ## Java SDK
 ``` shell
 sudo apt update
@@ -302,14 +262,6 @@ sudo apt search gccgo-go
 ```
 ``` shell
 sudo apt install golang-go
-```
-
-## Copy My Makefile
-```shell
-git clone https://github.com/Jhon-Henkel/linux-post-install-commands.git
-```
-```shell
-cp linux-post-install-commands.git/Makefile .
 ```
 
 ## Termius
