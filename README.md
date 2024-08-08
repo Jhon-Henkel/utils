@@ -17,6 +17,10 @@ These are for my use when I need to install a clean ubuntu on my computer.
 - [Steam](#steam)
 - [Postman](#postman)
 - [Java SDK](#java-sdk)
+- [Make](#make)
+- [Go Lang](#go-lang)
+- [Copy My Makefile](#copy-my-makefile)
+- [Termius](#termius)
 
 ## Google Chrome
 ``` shell
@@ -273,4 +277,45 @@ wget https://download.oracle.com/java/22/latest/jdk-22_linux-x64_bin.deb
 ```
 ``` shell
 sudo dpkg -i jdk-22_linux-x64_bin.deb
+```
+
+## Make
+``` shell
+sudo apt-get update
+```
+``` shell
+sudo apt-get -y install make
+```
+
+## Go Lang
+``` shell
+sudo apt-get update
+```
+``` shell
+sudo apt upgrade
+```
+``` shell
+sudo apt search golang-go
+```
+``` shell
+sudo apt search gccgo-go
+```
+``` shell
+sudo apt install golang-go
+```
+
+## Copy My Makefile
+```shell
+git clone https://github.com/Jhon-Henkel/linux-post-install-commands.git
+```
+```shell
+cp linux-post-install-commands.git/Makefile .
+```
+
+## Termius
+```shell
+wget https://www.termius.com/download/linux/Termius.deb
+```
+```shell
+sudo dpkg -i Termius.deb
 ```
