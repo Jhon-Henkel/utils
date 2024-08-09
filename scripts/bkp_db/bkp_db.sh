@@ -24,7 +24,7 @@ echo
 echo "-> Removendo dump do container"
 docker exec $CONTAINER_NAME rm /tmp/$SQL_BACKUP_FILE
 echo
-echo "-> Ziping file"
+echo "-> Zipping file"
 zip $ZIP_FILE_PATH $SQL_FILE_PATH
 echo
 echo "-> Removendo arquivo $SQL_BACKUP_FILE da VPS"
