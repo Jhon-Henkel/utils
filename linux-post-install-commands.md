@@ -18,6 +18,8 @@ These are for my use when I need to install a clean ubuntu on my computer.
 - [Make](#make)
 - [Go Lang](#go-lang)
 - [Termius](#termius)
+- [Postman](#postman)
+- [Woe USB](#woe-usb)
 
 ## Google Chrome
 ``` shell
@@ -270,4 +272,40 @@ wget https://www.termius.com/download/linux/Termius.deb
 ```
 ```shell
 sudo dpkg -i Termius.deb
+```
+
+## Postman
+Download from https://www.postman.com/downloads/ and run commands
+``` shell
+tar -xzf postman.tar.gz
+```
+``` shell
+sudo rm -rf /opt/Postman
+```
+``` shell
+sudo mv Postman /opt/Postman
+```
+``` shell
+sudo ln -s /opt/Postman/Postman /usr/bin/postman
+```
+``` shell
+cat > ~/.local/share/applications/postman.desktop <<EOL
+[Desktop Entry]
+Encoding=UTF-8
+Name=Postman
+Exec=postman
+# Before v6.1.2
+# Icon=/opt/Postman/resources/app/assets/icon.png
+Icon=/opt/Postman/app/resources/app/assets/icon.png
+Terminal=false
+Type=Application
+Categories=Development;
+EOL
+```
+
+## WoeUsb
+```bash
+sudo add-apt-repository ppa:tomtomtom/woeusb
+sudo apt update
+sudo apt install woeusb woeusb-frontend-wxgtk
 ```
