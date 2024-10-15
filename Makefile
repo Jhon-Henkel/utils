@@ -1,6 +1,7 @@
 update:
 	@echo "Updating OS packages"
-	sudo apt-get -y update && sudo apt-get -y upgrade && sudo snap refresh
+	sudo apt-get -y update && sudo apt-get -y upgrade && sudo snap refresh && omz update
+	@echo "Update is done!"
 
 docker-clean:
 	@echo "Cleaning container, images and volumes not in use"
