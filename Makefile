@@ -1,6 +1,6 @@
 update:
 	@echo "Updating OS packages"
-	sudo apt-get -y update && sudo apt-get -y upgrade && sudo snap refresh && omz update
+	sudo apt-get -y update && sudo apt-get -y upgrade && sudo snap refresh
 	@echo "Update is done!"
 
 docker-clean:
