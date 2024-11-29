@@ -1,5 +1,0 @@
-Subject: Falha ao fazer backup do banco de dados
-From: sender@email
-To: recipient@email
-
-Houve uma falha ao realizar backup do banco de dados.

@@ -1,5 +1,0 @@
-Subject: Sucesso ao fazer backup do banco de dados
-From: sender@email
-To: recipient@email
-
-Backup do banco de dados realizado com sucesso.
