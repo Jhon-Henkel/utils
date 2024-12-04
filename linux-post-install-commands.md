@@ -20,6 +20,7 @@ These are for my use when I need to install a clean ubuntu on my computer.
 - [Termius](#termius)
 - [Postman](#postman)
 - [Woe USB](#woe-usb)
+- [Flame Shot](#flame-shot)
 
 ## Google Chrome
 ``` shell
@@ -308,4 +309,9 @@ EOL
 sudo add-apt-repository ppa:tomtomtom/woeusb
 sudo apt update
 sudo apt install woeusb woeusb-frontend-wxgtk
+```
+
+## Flame Shot
+```bash
+apt install flameshot
 ```
