@@ -167,6 +167,6 @@ echo "\nTema e doca configurada com sucesso."
 # Criar e definir a pasta 'projects' como marcador
 mkdir -p ~/projects
 gio bookmark --add ~/projects
-cp Makefile ~/
+cp Makefile ~/Makefile
 
 echo "\nConfiguração concluída. Por favor, reinicie o sistema para aplicar as alterações."
