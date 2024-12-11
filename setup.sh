@@ -164,4 +164,8 @@ gsettings set org.gnome.shell.extensions.dash-to-dock multi-monitor true
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 echo "\nTema e doca configurada com sucesso."
 
+# Criar e definir a pasta 'projects' como marcador
+mkdir -p ~/projects
+gio bookmark --add ~/projects
+
 echo "\nConfiguração concluída. Por favor, reinicie o sistema para aplicar as alterações."
