@@ -135,4 +135,33 @@ install_package woeusb-frontend-wxgtk
 # Flameshot
 install_package flameshot
 
+# Configurar atalho Super+V para abrir o Diodon
+echo "\nConfigurando atalhos..."
+gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "[\"/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/\"]"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0 name "Abrir Diodon"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0 command "/usr/bin/diodon"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0 binding "<Super>v"
+
+# Configurar atalho Super+V para abrir o Diodon
+gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "[\"/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/\", \"/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/\"]"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom1 name "Abrir Flameshot"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom1 command "/usr/bin/flameshot gui"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom1 binding "Print"
+
+# Remover o atalho 'Ctrl + Alt + Seta para baixo' (mover para a área de trabalho inferior)
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "[]"
+echo "\nAtalhos configurados com sucesso."
+
+echo "\nConfigurando o tema e doca do Ubuntu para o tema escuro..."
+# Configurar o tema do Ubuntu para o tema escuro
+gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-dark'
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+
+# Configurar doca
+gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'BOTTOM'
+gsettings set org.gnome.shell.extensions.dash-to-dock multi-monitor true
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
+echo "\nTema e doca configurada com sucesso."
+
 echo "\nConfiguração concluída. Por favor, reinicie o sistema para aplicar as alterações."
