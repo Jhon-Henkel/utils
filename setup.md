@@ -221,9 +221,11 @@ plugins=(
 
 alias sail='bash vendor/bin/sail'
 ```
-
 ``` shell
 sudo reboot
+```
+``` shell
+. ~/.zshrc
 ```
 
 ## Ionic cli
@@ -236,10 +238,10 @@ npm install -g @ionic/cli
 sudo apt update
 ```
 ``` shell
-wget https://download.oracle.com/java/22/latest/jdk-22_linux-x64_bin.deb
+wget https://download.oracle.com/java/23/latest/jdk-23_linux-x64_bin.deb
 ```
 ``` shell
-sudo dpkg -i jdk-22_linux-x64_bin.deb
+sudo dpkg -i jdk-23_linux-x64_bin.deb
 ```
 
 ## Make
