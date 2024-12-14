@@ -16,7 +16,7 @@ install_package() {
 install_package wget
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb || sudo apt --fix-broken install -y
-rm google-chrome-stable_current_amd64.deb
+rm ./google-chrome-stable_current_amd64.deb
 
 # Htop
 install_package htop
@@ -44,14 +44,15 @@ sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyring
 sudo chmod a+r /etc/apt/keyrings/docker.asc
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian $(. /etc/os-release && echo \"bookworm\") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt update
-install_package docker-ce\install_package docker-ce-cli
+install_package docker-ce 
+install_package docker-ce-cli
 install_package containerd.io
 install_package docker-buildx-plugin
 install_package docker-compose-plugin
-sudo groupadd docker
+if ! getent group docker > /dev/null 2>&1; then
+    sudo groupadd docker
+fin
 sudo usermod -aG docker $USER
-newgrp docker
-sudo docker run hello-world
 
 # Spotify
 curl -sS https://download.spotify.com/debian/pubkey_6224F9941A8AA6D1.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
@@ -76,9 +77,9 @@ install_package git
 # Vim
 install_package vim
 
-# Zsh and Oh-my-zsh
+Zsh and Oh-my-zsh
 install_package zsh
-sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" --unattended
 chsh -s $(which zsh)
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
@@ -86,8 +87,7 @@ install_package zsh-autosuggestions
 install_package zsh-syntax-highlighting
 echo 'ZSH_THEME="arrow"' >> ~/.zshrc
 echo 'plugins=(git docker docker-compose zsh-autosuggestions)' >> ~/.zshrc
-
-echo "alias sail='bash vendor/bin/sail'" >> ~/.zshrc
+echo 'alias sail="bash vendor/bin/sail"' >> ~/.zshrc
 
 # Ionic CLI
 npm install -g @ionic/cli
@@ -126,47 +126,10 @@ Categories=Development;
 EOL
 rm postman.tar.gz
 
-# Woe USB
-sudo add-apt-repository -y ppa:tomtomtom/woeusb
-sudo apt update
-install_package woeusb
-install_package woeusb-frontend-wxgtk
-
 # Flameshot
 install_package flameshot
 
-# Configurar atalho Super+V para abrir o Diodon
-echo "\nConfigurando atalhos..."
-gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "[\"/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/\"]"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0 name "Abrir Diodon"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0 command "/usr/bin/diodon"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0 binding "<Super>v"
+sudo chmod 777 -R /home/$USER/projects/
+sudo chmod 777 -R /home/$USER/Makefile
 
-# Configurar atalho Super+V para abrir o Diodon
-gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "[\"/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/\", \"/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/\"]"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom1 name "Abrir Flameshot"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom1 command "/usr/bin/flameshot gui"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom1 binding "Print"
-
-# Remover o atalho 'Ctrl + Alt + Seta para baixo' (mover para a área de trabalho inferior)
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "[]"
-echo "\nAtalhos configurados com sucesso."
-
-echo "\nConfigurando o tema e doca do Ubuntu para o tema escuro..."
-# Configurar o tema do Ubuntu para o tema escuro
-gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-dark'
-gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-
-# Configurar doca
-gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
-gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'BOTTOM'
-gsettings set org.gnome.shell.extensions.dash-to-dock multi-monitor true
-gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
-echo "\nTema e doca configurada com sucesso."
-
-# Criar e definir a pasta 'projects' como marcador
-mkdir -p ~/projects
-gio bookmark --add ~/projects
-cp Makefile ~/Makefile
-
-echo "\nConfiguração concluída. Por favor, reinicie o sistema para aplicar as alterações."
+echo "Configuração concluída. Por favor, reinicie o sistema para aplicar as alterações."
