@@ -90,9 +90,9 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 install_package zsh-autosuggestions
 install_package zsh-syntax-highlighting
-echo 'ZSH_THEME="arrow"' >> ~/.zshrc
-echo 'plugins=(git docker docker-compose zsh-autosuggestions)' >> ~/.zshrc
-echo 'alias sail="bash vendor/bin/sail"' >> ~/.zshrc
+echo 'ZSH_THEME="arrow"' >> ${ZDOTDIR:-$HOME}/.zshrc
+echo 'plugins=(git docker docker-compose zsh-autosuggestions)' >> ${ZDOTDIR:-$HOME}/.zshrc
+echo 'alias sail="bash vendor/bin/sail"' >> ${ZDOTDIR:-$HOME}/.zshrc
 
 # Ionic CLI
 echo "===================================================================================="
