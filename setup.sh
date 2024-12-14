@@ -93,6 +93,7 @@ install_package zsh-syntax-highlighting
 echo 'ZSH_THEME="arrow"' >> ${ZDOTDIR:-$HOME}/.zshrc
 echo 'plugins=(git docker docker-compose zsh-autosuggestions)' >> ${ZDOTDIR:-$HOME}/.zshrc
 echo 'alias sail="bash vendor/bin/sail"' >> ${ZDOTDIR:-$HOME}/.zshrc
+source ~/.zshrc
 
 # Ionic CLI
 echo "===================================================================================="
