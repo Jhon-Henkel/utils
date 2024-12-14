@@ -85,7 +85,7 @@ install_package vim
 #Zsh and Oh-my-zsh
 install_package zsh
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" --unattended
-chsh -s $(which zsh)
+sudo chsh -s /usr/bin/zsh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 install_package zsh-autosuggestions
