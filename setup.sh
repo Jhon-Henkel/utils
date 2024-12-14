@@ -82,19 +82,6 @@ install_package git
 # Vim
 install_package vim
 
-#Zsh and Oh-my-zsh
-install_package zsh
-sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" --unattended
-sudo chsh -s /usr/bin/zsh
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-install_package zsh-autosuggestions
-install_package zsh-syntax-highlighting
-echo 'ZSH_THEME="arrow"' >> ${ZDOTDIR:-$HOME}/.zshrc
-echo 'plugins=(git docker docker-compose zsh-autosuggestions)' >> ${ZDOTDIR:-$HOME}/.zshrc
-echo 'alias sail="bash vendor/bin/sail"' >> ${ZDOTDIR:-$HOME}/.zshrc
-source ~/.zshrc
-
 # Ionic CLI
 echo "===================================================================================="
 echo "Instalando Ionic Cli..."
