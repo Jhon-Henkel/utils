@@ -28,3 +28,8 @@ O config-system.sh deve ser rodado sem sudo, mas em algum momento pode pedir a s
 
 - Logar no Jetbrains toolbox e baixar o PHP Storm, Web Storm, Go Land e IntelliJ
 - Instalar o [Oh My Zsh](https://github.com/Jhon-Henkel/utils/blob/main/setup.md#zsh-and-ho-my-zsh)
+- Configurar grupo docker
+  ```
+  sudo usermod -aG docker $USER
+  newgrp docker
+  ```
