@@ -29,3 +29,5 @@ O config-system.sh deve ser rodado sem sudo, mas em algum momento pode pedir a s
   ```
 
 - Logar no Jetbrains toolbox e baixar o PHP Storm, Web Storm, Go Land e IntelliJ
+
+- Definir o Oh My Zsh como principal
