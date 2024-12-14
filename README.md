@@ -1,5 +1,5 @@
 ### Processo totalmente manual
-- Ler o arquivo setup.md e ir fazendo ação por ação manualmente, (https://github.com/Jhon-Henkel/utils/blob/main/setup.md)[aqui].
+- Ler o arquivo setup.md e ir fazendo ação por ação manualmente, [aqui](https://github.com/Jhon-Henkel/utils/blob/main/setup.md).
 
 ### Processo semi automatico
 Em um determinado momento ao rodar o setup.sh, vai ser perguntado se quer definir o Oh my Zsh como shell padrão, digitar Y e depois escrever exit, voltando assim para a execução do setup.
@@ -29,4 +29,4 @@ O config-system.sh deve ser rodado sem sudo, mas em algum momento pode pedir a s
   ```
 
 - Logar no Jetbrains toolbox e baixar o PHP Storm, Web Storm, Go Land e IntelliJ
-- Instalar o (https://github.com/Jhon-Henkel/utils/blob/main/setup.md#zsh-and-ho-my-zsh)[Oh My Zsh]
+- Instalar o [Oh My Zsh](https://github.com/Jhon-Henkel/utils/blob/main/setup.md#zsh-and-ho-my-zsh)
