@@ -8,12 +8,17 @@ sudo apt update && sudo apt upgrade -y
 
 # Função para instalar pacotes com apt
 install_package() {
+  echo "===================================================================================="
   echo "Instalando $1..."
+  echo "===================================================================================="
   sudo apt install -y "$1"
 }
 
-# Google Chrome
 install_package wget
+
+echo "===================================================================================="
+echo "Instalando Chrome..."
+echo "===================================================================================="
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb || sudo apt --fix-broken install -y
 rm ./google-chrome-stable_current_amd64.deb
@@ -51,7 +56,7 @@ install_package docker-buildx-plugin
 install_package docker-compose-plugin
 if ! getent group docker > /dev/null 2>&1; then
     sudo groupadd docker
-fin
+fi
 sudo usermod -aG docker $USER
 
 # Spotify
@@ -77,7 +82,7 @@ install_package git
 # Vim
 install_package vim
 
-Zsh and Oh-my-zsh
+#Zsh and Oh-my-zsh
 install_package zsh
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" --unattended
 chsh -s $(which zsh)
@@ -90,12 +95,18 @@ echo 'plugins=(git docker docker-compose zsh-autosuggestions)' >> ~/.zshrc
 echo 'alias sail="bash vendor/bin/sail"' >> ~/.zshrc
 
 # Ionic CLI
+echo "===================================================================================="
+echo "Instalando Ionic Cli..."
+echo "===================================================================================="
 npm install -g @ionic/cli
 
 # Java SDK
-wget https://download.oracle.com/java/22/latest/jdk-22_linux-x64_bin.deb
-sudo dpkg -i jdk-22_linux-x64_bin.deb || sudo apt --fix-broken install -y
-rm jdk-22_linux-x64_bin.deb
+echo "===================================================================================="
+echo "Instalando Java SDK..."
+echo "===================================================================================="
+wget https://download.oracle.com/java/23/latest/jdk-23_linux-x64_bin.deb
+sudo dpkg -i jdk-23_linux-x64_bin.deb || sudo apt --fix-broken install -y
+rm jdk-23_linux-x64_bin.deb
 
 # Make
 install_package make
@@ -104,11 +115,17 @@ install_package make
 install_package golang-go
 
 # Termius
+echo "===================================================================================="
+echo "Instalando Termius..."
+echo "===================================================================================="
 wget https://www.termius.com/download/linux/Termius.deb
 sudo dpkg -i Termius.deb || sudo apt --fix-broken install -y
 rm Termius.deb
 
 # Postman
+echo "===================================================================================="
+echo "Instalando Postman..."
+echo "===================================================================================="
 wget https://dl.pstmn.io/download/latest/linux64 -O postman.tar.gz
 tar -xzf postman.tar.gz
 sudo rm -rf /opt/Postman
@@ -129,7 +146,6 @@ rm postman.tar.gz
 # Flameshot
 install_package flameshot
 
-sudo chmod 777 -R /home/$USER/projects/
-sudo chmod 777 -R /home/$USER/Makefile
-
-echo "Configuração concluída. Por favor, reinicie o sistema para aplicar as alterações."
+echo "===================================================================================="
+echo "Configuração concluída. Por favor, reinicie o sistema para aplicar as alterações..."
+echo "===================================================================================="
