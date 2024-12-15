@@ -33,3 +33,13 @@ O config-system.sh deve ser rodado sem sudo, mas em algum momento pode pedir a s
   sudo usermod -aG docker $USER
   newgrp docker
   ```
+### Processo automático (Aplicação GO, ainda em fase de testes)
+
+---
+--- EM FASE DE TESTES ---
+
+---
+- Executar o comando:
+  ```bash
+  ./setup.sh
+  ```
