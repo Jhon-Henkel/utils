@@ -41,5 +41,5 @@ O config-system.sh deve ser rodado sem sudo, mas em algum momento pode pedir a s
 ---
 - Executar o comando:
   ```bash
-  ./setup.sh
+  ./setup
   ```
