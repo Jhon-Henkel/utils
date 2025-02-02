@@ -33,6 +33,11 @@ O config-system.sh deve ser rodado sem sudo, mas em algum momento pode pedir a s
   sudo usermod -aG docker $USER
   newgrp docker
   ```
+- Caso o termius não abra, rode:
+  ```bash
+  sudo chown root:root /opt/Termius/chrome-sandbox   
+  sudo chmod 4755 /opt/Termius/chrome-sandbox  
+  ```
 ### Processo automático (Aplicação GO, ainda em fase de testes)
 
 ---
