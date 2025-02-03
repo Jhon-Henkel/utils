@@ -47,7 +47,8 @@ autoinstall:
     - curtin in-target -- /bin/bash -c "echo 'deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian $(. /etc/os-release && echo \"bookworm\") stable' | tee /etc/apt/sources.list.d/docker.list > /dev/null"
     - curtin in-target -- /bin/bash -c "apt update && apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin"
     - curtin in-target -- /bin/bash -c "groupadd docker || true"
-    - curtin in-target -- /bin/bash -c "usermod -aG docker usuario"
+    - curtin in-target -- /bin/bash -c "usermod -aG docker jhon"
+    - curtin in-target -- /bin/bash -c "newgrp docker"
 
     # Spotify
     - curtin in-target -- /bin/bash -c "curl -sS https://download.spotify.com/debian/pubkey_C85668DF69375001.gpg | gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg"
@@ -78,6 +79,8 @@ autoinstall:
     - curtin in-target -- /bin/bash -c "wget https://www.termius.com/download/linux/Termius.deb"
     - curtin in-target -- /bin/bash -c "dpkg -i Termius.deb || apt --fix-broken install -y"
     - curtin in-target -- /bin/bash -c "rm Termius.deb"
+    - curtin in-target -- /bin/bash -c "sudo chown root:root /opt/Termius/chrome-sandbox"
+    - curtin in-target -- /bin/bash -c "- curtin in-target -- /bin/bash -c "sudo chmod 4755 /opt/Termius/chrome-sandbox"
 
     # Postman
     - curtin in-target -- /bin/bash -c "wget https://dl.pstmn.io/download/latest/linux64 -O postman.tar.gz"
