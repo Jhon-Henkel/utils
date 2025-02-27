@@ -91,6 +91,9 @@ autoinstall:
     - curtin in-target -- /bin/bash -c "echo '[Desktop Entry]\nEncoding=UTF-8\nName=Postman\nExec=postman\nIcon=/opt/Postman/app/resources/app/assets/icon.png\nTerminal=false\nType=Application\nCategories=Development;' > ~/.local/share/applications/postman.desktop"
     - curtin in-target -- /bin/bash -c "rm postman.tar.gz"
 
+    # Whatsapp
+    - curtin in-target -- /bin/bash -c "snap install whatsapp-linux-app"
+
     # System Config
     - curtin in-target -- /bin/bash -c "gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down '[]'"
     - curtin in-target -- /bin/bash -c "gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-dark'"
