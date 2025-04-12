@@ -14,5 +14,7 @@ Configurar Rule Processing of HID++ Notifications
 
 https://pwr-solaar.github.io/Solaar/rules/
 
+Colar as configs em `.config/solaar`
+
 
 Fonte: https://www.reddit.com/r/linuxmasterrace/comments/10fxgx9/solaar_mouse_master_mx3s/
