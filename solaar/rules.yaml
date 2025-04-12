@@ -38,6 +38,6 @@
 - Rule:
   - Test: [thumb_wheel_down, 0xa]
   - KeyPress:
-    - [Control_L, Shift_L, Tab]
+    - [Control_L, Tab]
     - click
 ...
