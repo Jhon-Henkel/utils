@@ -1,4 +1,4 @@
-Instalar o 
+Instalar o nb-clean
 ```bash
 pip install nb-clean
 ```
