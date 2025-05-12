@@ -38,13 +38,3 @@ O config-system.sh deve ser rodado sem sudo, mas em algum momento pode pedir a s
   sudo chown root:root /opt/Termius/chrome-sandbox   
   sudo chmod 4755 /opt/Termius/chrome-sandbox  
   ```
-### Processo automático (Aplicação GO, ainda em fase de testes)
-
----
---- EM FASE DE TESTES ---
-
----
-- Executar o comando:
-  ```bash
-  ./setup
-  ```
