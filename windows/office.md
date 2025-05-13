@@ -5,22 +5,15 @@
 
 ======
 
-Passo 1: 
-
-  a) Crie uma pasta no diretório raiz do seu computador (C:\) 
-  
-  b) dê o nome de MS OFFICE SETUP
-
-Passo 2: 
-
-  a) Na pesquisa do windows, digite CMD
-   
-  b) Execute como administrador e digite os comandos a seguir:
-   ```
-     CD\
-     CD c:\MS OFFICE SETUP
-     setup.exe/configure Configuração.xml
-   ```
+- Crie uma pasta no diretório raiz do seu computador (C:\) 
+- Dê o nome de MS OFFICE SETUP
+- Na pesquisa do windows, digite CMD
+- Execute como administrador e digite os comandos a seguir:
+  ```
+    CD\
+    CD c:\MS OFFICE SETUP
+    setup.exe/configure Configuração.xml
+  ```
 ### Ativação 
 
-Rodar no power shell como adim ```irm https://massgrave.dev/get | iex```
+- Rodar no power shell como adim ```irm https://massgrave.dev/get | iex```
