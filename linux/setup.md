@@ -21,6 +21,7 @@ These are for my use when I need to install a clean ubuntu on my computer.
 - [Postman](#postman)
 - [Woe USB](#woe-usb)
 - [Flame Shot](#flame-shot)
+- [Python](#python)
 
 ## Google Chrome
 ``` shell
@@ -316,4 +317,13 @@ sudo apt install woeusb woeusb-frontend-wxgtk
 ## Flame Shot
 ```bash
 apt install flameshot
+```
+
+## Python
+```bash
+sudo apt update
+sudo apt install python3 python3-pip python3-venv -y
+python3 -m venv jupyterenv
+source jupyterenv/bin/activate
+pip install jupyterlab
 ```
