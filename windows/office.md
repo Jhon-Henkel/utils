@@ -17,4 +17,4 @@
   ```
 ### Ativação 
 
-- Rodar no power shell como adim ```irm https://massgrave.dev/get | iex```
+- Rodar no power shell como adim ```irm https://massgrave.dev/get | iex``` ou ```irm https://get.activated.win | iex```
