@@ -1,5 +1,5 @@
 ## Instalação: 
-- link: https://www.youtube.com/watch?v=ZdmHPfy89gI
+- link: https://www.youtube.com/watch?v=YtjE4E8EQvQ
   
 ⚠️ Baixe tudo o que precisa e cole do diretório raíz do seu computador (C:\): [link](https://www.mediafire.com/file/ym0njotv4ymf33o/MS_Office_Setup.rar/file) ou pegue o rar dessa pasta.
 
