@@ -7,4 +7,7 @@ docker-clean:
 	@echo "Cleaning container, images and volumes not in use"
 	docker rm $$(docker ps -a -f status=exited -f status=created -q) && docker volume prune -a -f && docker image prune -a -f
 
-.PHONY: update docker-clean
+clean:
+        sudo rm -rf ~/.cache/* && docker system prune && docker system prune -a --volumes
+
+.PHONY: update docker-clean clean
