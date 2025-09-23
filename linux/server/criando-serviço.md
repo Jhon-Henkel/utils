@@ -30,3 +30,7 @@ Rodar os seguintes comandos:
   sudo systemctl start [MEUAPP]
   sudo journalctl -u [MEUAPP] -f # Esse comando serve para ver logs.
 ```
+Dar permissão root ao .env
+```bash
+  sudo chmod 644 /home/azureuser/services/entrypoint/.env
+```
