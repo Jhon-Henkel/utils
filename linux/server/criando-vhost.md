@@ -1,4 +1,4 @@
-### Criando o vhost com SSL
+<img width="2540" height="1365" alt="image" src="https://github.com/user-attachments/assets/59072046-3e2c-4518-a7fd-3ef79ac0c38f" />### Criando o vhost com SSL
 ```bash
   sudo a2enmod proxy
   sudo a2enmod proxy_http
@@ -33,5 +33,5 @@ Adicionar o `Listen [PORTA_WEB]`
 ```bash
 sudo a2ensite [FILENAME].conf
 sudo apache2ctl configtest
-
+sudo systemctl restart apache2
 ```
